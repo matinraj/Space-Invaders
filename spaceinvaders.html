@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <style>
+    .shipBullet {
+    fill: red;
+  }
+  .alienBullet {
+    fill: rgb(255, 136, 0);
+  }
+
+    .alien1 {
+        fill: rgb(229, 255, 0);
+    }
+
+    .alien2 {
+        fill: rgba(231, 139, 0);
+    }
+    .alien3 {
+        fill: rgba(240, 46, 32, 0.753);
+    }
+    .alien4 {
+        fill: rgb(0, 84, 209);
+    }
+    .gameover {
+        font-family:sans-serif;
+        font-size:80px;
+        fill:red;
+  }
+            @import url(style.css);
+            p.highlight {
+                color: red;
+            }
+            svg {
+                background-color: rgb(41, 41, 36);
+            }
+            
+.dot1 {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(229, 255, 0);
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot2 {
+  height: 25px;
+  width: 25px;
+  background-color: rgba(231, 139, 0);
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot3 {
+  height: 25px;
+  width: 25px;
+  background-color: rgba(240, 46, 32, 0.753);
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot4 {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(0, 84, 209);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.key {
+    width:18px;
+    text-align:center;
+    border-radius:3px;
+    background-color:lightgray;
+  }
+  .highlight {
+    background-color:pink;}
+  
+  div#controls {
+      float: right;
+      margin: 50px;
+  }
+        </style>
+        <script src="./dist/spaceinvaders.js"></script>
+    </head>
+    <body>
+        <h1>Space Invaders</h1>
+        <svg id="canvas" width="600" height="600" >
+            <g id="ship" transform="translate(25,555)">
+                <polygon class="ship" points="-10,15 10,15 0,-20" style="fill:lightblue">
+                </polygon>
+                </g>
+            <g id="shield1" >
+            <rect rx="20" ry="20" width="100" height="100" 
+            style="fill:rgb(69, 170, 59)" /> </g>
+            <g id="shield2" >
+                <rect rx="20" ry="20" width="100" height="100" 
+                style="fill:rgb(69, 170, 59)" /> </g>
+                <g id="shield3" >
+                    <rect rx="20" ry="20" width="100" height="100"
+                    style="fill:rgb(69, 170, 59)" /> </g>
+                    
+        </svg>
+        
+        <div id="controls">
+            <h2>Score: <span id="score_id">...</span></h2>
+            <h2>Level: <span id="level_id">...</span></h2>
+            <h3>Controls: </h3>
+            
+            <table>
+                <tr><td>Move Left</td><td><div id="ArrowLeft" class="key">&#8678;</div></td></tr>
+                <tr><td>Move Right</td><td><div id="ArrowRight" class="key">&#8680;</div></td></tr>
+                <tr><td>Fire</td><td><div id="Space" class="key" style="width:50px">Space</div></td></tr>
+
+            </table>
+            <h3>Points: </h3>
+            <table>
+                <tr><td>1 point: </td><td><div class="dot4"></div></td></tr>
+                <tr><td>2 points: </td><td><div class="dot3"></div></td></tr>
+                <tr><td>3 points: </td><td><div class="dot2"></div></td></tr>
+                <tr><td>4 points: </td><td><div class="dot1"></div></td></tr>
+                
+            </table>
+            <h3> </h3>
+            <span>A restart button will appear once Game is Over</span>
+            </div>
+
+        <div >
+            
+            
+        </div>
+            <div id="button_id"></div>
+    </body>
+</html>
